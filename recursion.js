@@ -1,28 +1,9 @@
 // **FIBONACCI******************************************************************
-function fib(num) {
-  let sequence = {
-    1: 1,
-    2: 1
-  }
-
-  while(!sequence[num]){
-    if(num == 1) {
-      return 1
-    } else {
-      let position = 3
-      sequence[position] = "temp"
-      console.log(sequence);
-      let previous1 = sequence[position - 1]
-      console.log(previous1);
-      let previous2 = sequence[position - 2]
-      console.log(previous2);
-      sequence[position] = previous1 + previous2
-      console.log(sequence);
-      position = position++
-    }
-  }
-}
-console.log(fib(4));
+// function fib(n){
+//     if (n <= 2) return 1;
+//     return fib(n-1) + fib(n-2);
+// }
+// console.log(fib(7));
 
 
 // **RECURSIVE RANGE************************************************************
@@ -31,7 +12,11 @@ console.log(fib(4));
 //   let result = num
 //   return result + recursiveRange(num - 1)
 // }
-//
+
+// function recursiveRange(x){
+//    if (x === 0 ) return 0;
+//    return x + recursiveRange(x-1);
+// }
 // console.log(recursiveRange(10));
 
 // **PRODUCT OF ARRAY*********maybe not recursion?******************************
@@ -48,7 +33,13 @@ console.log(fib(4));
 //   helper(arr)
 //   return result
 // }
-//
+
+// function productOfArray(arr) {
+//     if(arr.length === 0) {
+//         return 1;
+//     }
+//     return arr[0] * productOfArray(arr.slice(1));
+// }
 // console.log(productOfArray([1,2,3,10]));
 
 // **BASE/EXPONENT**************************************************************
