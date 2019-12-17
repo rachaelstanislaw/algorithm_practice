@@ -1,8 +1,36 @@
+// **QUICK SORT*****************************************************************
+// Like merge sort, exploits the fact that arrays of 0 or 1 are always sorted
+// Works by selecting one number (the "pivot"), and finding the index where the
+// pivot should end up in the sorted array. Picks any index, and moves values
+// either to the left or right of the pivot, depending on if it's greater than
+// or less than pivot's value.
+
+// "Pivot helper" or "partition"
+// Its useful to create a function responsible for rearranging elements in an
+// array on either side of the pivot. Helper function should designate pivot.
+// Array should be rearranged so all values less than the pivot are placed to
+// the left and values greater than the pivot are placed on the right. The order
+// of the elements on the left or right doesn't matter. Helper should do this
+// IN PLACE, not create a new array. Index of the pivot should be returned at
+// the end.
+//1. Should accept 3 arguments:
+  // - An array
+  // - Start index (0)
+  // - End index (arr.length - 1)
+//2. Store current pivot index in a variable
+//3. Loop...
+  // - If the pivot is greater than the current element, increment the pivot
+  // index variable, and then swap the current element with the element at the
+  // pivot index.
+// 4. Swap the starting element (i.e. pivot) with the pivot index.
+// 5. Return the pivot index.
+
+
 // **MERGE SORT*****************************************************************
-// In order to mplement merge sort, it's useful to first create a function that
+// In order to implement merge sort, it's useful to first create a function that
 // merges two sorted arrays. This helper function should also return a sorted
 // array of all elements of previous 2 arrays:
-function merge(arr1, arr2) {
+// function merge(arr1, arr2) {
   // create an empty array, take a look at smallest values of input arrays
   let results = []
   let i = 0
