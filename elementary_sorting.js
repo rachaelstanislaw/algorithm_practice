@@ -1,4 +1,5 @@
 // **INSERTION SORT*************************************************************
+// refactor these to all be es6
 nums = [2,1,9,76,4]
 function insertionSort(arr) {
   for(var i = 1; i < arr.length; i++) {
